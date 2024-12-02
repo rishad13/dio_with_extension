@@ -42,23 +42,6 @@ A modular and reusable **Network API Service** built with **Dio** in Flutter. Th
 
 ---
 
-## 📂 Folder Structure  
-
-```plaintext
-lib/
-├── extensions/
-│   └── records.dart         # Extensions for structured responses
-├── observers/
-│   └── dio_observer.dart    # Dio interceptor for logging and debugging
-├── services/
-│   └── network_api_service.dart  # Core implementation of API service
-├── parts_and_exceptions/
-│   └── base_api_services.dart    # Abstract base class for API services
-└── main.dart                # Entry point of the Flutter app
-```
-
----
-
 ## 🔗 Links  
 
 - 📖 [Read the Full Article Here](https://medium.com/@rishad2002/api-calls-in-flutter-using-dio-with-extensions-and-records-for-clean-code-cd4935328c98)  

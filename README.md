@@ -1,6 +1,4 @@
-Here’s your **README.md** file for GitHub:
 
-```markdown
 # 🌐 Network API Service in Flutter  
 
 A modular and reusable **Network API Service** built with **Dio** in Flutter. This implementation emphasizes clean code, error handling, and structured responses using modern Flutter practices.
@@ -20,8 +18,7 @@ A modular and reusable **Network API Service** built with **Dio** in Flutter. Th
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/network-api-service-flutter.git
-   cd network-api-service-flutter
+   git clone https://github.com/rishad13/dio_with_extension
    ```  
 
 2. Install dependencies:  
@@ -64,8 +61,8 @@ lib/
 
 ## 🔗 Links  
 
-- 📖 [Read the Full Article Here](#)  
-- 💻 [Explore the Code on GitHub](https://github.com/your-username/network-api-service-flutter)  
+- 📖 [Read the Full Article Here](https://medium.com/@rishad2002/api-calls-in-flutter-using-dio-with-extensions-and-records-for-clean-code-cd4935328c98)  
+- 💻 [Explore the Code on GitHub](https://github.com/rishad13/dio_with_extension)  
 
 ---
 
@@ -75,16 +72,5 @@ We welcome contributions! Feel free to **fork** the repository, submit a pull re
 
 ---
 
-## 📜 License  
-
-This project is licensed under the [MIT License](LICENSE).  
-
----
-
 💡 **Let’s create robust and scalable APIs in Flutter!**  
-```
 
-### Steps:  
-1. Replace `https://github.com/your-username/network-api-service-flutter` with your actual GitHub repo link.  
-2. Add the actual article link in place of `#`.  
-3. Include the license file in your repo if applicable.

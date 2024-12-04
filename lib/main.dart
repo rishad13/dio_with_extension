@@ -33,14 +33,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  /// Example of how to use the `getAPIResponse` method in `NetworkApiService`
-  /// to fetch data from an API and print it to the console.
-  ///
-  /// This is called when the floating action button is pressed.
-  ///
-  /// The API endpoint used is a public API provided by
-  /// <https://jsonplaceholder.typicode.com/> and returns a JSON array of
-  /// placeholder post data.
+
+/// Fetches data from the given API endpoint and logs the response.
+///
+/// This function makes an asynchronous GET request to the specified URL using
+/// the `NetworkApiService`. The response is processed based on whether the
+/// request is successful or fails. If successful, the response data is logged.
+/// If the request fails, an exception with the error message is thrown.
+///
+/// Throws:
+///   An exception if the API request fails, containing the error message.
   void _getApi() async {
     NetworkApiService apiService = NetworkApiService();
     var response = await apiService.getAPIResponse(

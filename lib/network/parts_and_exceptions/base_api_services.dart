@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import '../../extensions/records.dart';
+import 'network_response.dart';
 
 abstract class BaseApiServices {
   /// Sends a GET request to the specified URL with the given headers and token.

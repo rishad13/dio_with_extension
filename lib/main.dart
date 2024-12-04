@@ -1,6 +1,6 @@
 import 'dart:developer';
-
 import 'package:dio_with_extension/network/http_request.dart';
+import 'package:dio_with_extension/network/parts_and_exceptions/network_response.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,20 +33,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-/// Fetches data from a placeholder API using a GET request and logs the response data.
-/// 
-/// This method utilizes the `NetworkApiService` to make a GET request to the specified URL.
-/// If the request fails, it throws an exception with the failure message.
-/// On success, it logs the response data to the console.
+  /// Example of how to use the `getAPIResponse` method in `NetworkApiService`
+  /// to fetch data from an API and print it to the console.
+  ///
+  /// This is called when the floating action button is pressed.
+  ///
+  /// The API endpoint used is a public API provided by
+  /// <https://jsonplaceholder.typicode.com/> and returns a JSON array of
+  /// placeholder post data.
   void _getApi() async {
     NetworkApiService apiService = NetworkApiService();
     var response = await apiService.getAPIResponse(
         "https://jsonplaceholder.typicode.com/posts", {}, null);
-    if (response.fail != null) {
-      throw response.fail!.message;
-    } else {
-      log(response.success!.response.data.toString());
-    }
+    response.when(
+        onSuccess: (value) => log(value.response.data.toString()),
+        onFail: (value) => throw value.message);
   }
 
   @override

@@ -28,16 +28,14 @@ A modular and reusable **Network API Service** built with **Dio** in Flutter. Th
 
 3. Use the `NetworkApiService` class to handle API requests in your project:  
    ```dart
-   void _getApi() async {
-       NetworkApiService apiService = NetworkApiService();
-       var response = await apiService.getAPIResponse(
-           "https://jsonplaceholder.typicode.com/posts", {}, null);
-       if (response.fail != null) {
-           throw response.fail!.message;
-       } else {
-           log(response.success!.response.data.toString());
-       }
-   }
+     void _getApi() async {
+    NetworkApiService apiService = NetworkApiService();
+    var response = await apiService.getAPIResponse(
+        "https://jsonplaceholder.typicode.com/posts", {}, null);
+    response.match(
+        onSuccess: (value) => log(value.response.data.toString()),
+        onFail: (value) => throw value.message);
+  }
    ```
 
 ---

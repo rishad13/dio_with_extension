@@ -1,6 +1,5 @@
 import 'dart:developer';
 import 'package:dio_with_extension/network/http_request.dart';
-import 'package:dio_with_extension/network/parts_and_exceptions/network_response.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -47,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
     NetworkApiService apiService = NetworkApiService();
     var response = await apiService.getAPIResponse(
         "https://jsonplaceholder.typicode.com/posts", {}, null);
-    response.when(
+    response.match(
         onSuccess: (value) => log(value.response.data.toString()),
         onFail: (value) => throw value.message);
   }

@@ -34,8 +34,8 @@ A modular and reusable **Network API Service** built with **Dio** in Flutter. Th
         "https://jsonplaceholder.typicode.com/posts", {}, null);
     response.match(
         onSuccess: (value) => log(value.response.data.toString()),
-        onFail: (value) => throw value.message);
-  }
+        onFail: (value) => throw value.message);}
+  
    ```
 
 ---
